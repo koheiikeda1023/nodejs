@@ -1,10 +1,10 @@
 {
   "name": "sample",
   "version": "0.0.0",
-  "main": "example.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node example.js"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
     "node": "12.19.0"
   },
   "dependencies": {
-    "http": "0.0.1-security"
+    "http": "0.0.1-security",
+    "axios": "^0.16.2",
+    "querystring": "^0.2.0"
   }
 }
