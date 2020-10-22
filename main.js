@@ -22,6 +22,6 @@ function doRequest(req, res) {
       
     } 
 }
-server.listen(process.env.PORT || port, hostname, () => {
+server.listen(process.env.PORT || port, () => {
 console.log('Server running at http://' + hostname + ':' + port + '/');
 });
