@@ -24,8 +24,9 @@
     "node": "12.19.0"
   },
   "dependencies": {
-    "http": "0.0.1-security",
     "axios": "^0.16.2",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
     "querystring": "^0.2.0"
   }
 }

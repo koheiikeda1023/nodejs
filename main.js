@@ -1,27 +1,30 @@
-var http = require('http');
+const express = require("express");
+const line = require('./line');
+const fs = require('fs');
+const app = express();
+
 const hostname = 'localhost';
 const port = 8000;
 
-var server = http.createServer();
-server.on('request', doRequest);
-var fs = require('fs');
+/* 2. listen()メソッドを実行して8000番ポートで待ち受け。*/
+var server = app.listen(port, function(){
+  console.log('Server running at http://' + hostname + ':' + port + '/');
+});
 
-function doRequest(req, res) { 
-  
-  // var url = "public" + req.url;
-  // if (fs.existsSync(url)) {
-   //fs.readFile(url, (err, data) => {
-  //     if (!err) {
-
-    fs.readFile('./index.html', 'utf-8' , doReard );
-
-    function doReard(err, data) {
+// [1] フロントエンドからのリクエストを受け付けてHTMLを表示したい
+app.get('/', function(req, res, next) {
+  function doReard(err, data) {
     res.writeHead(200, {"Content-Type": "text/html"});
     res.write(data);
     res.end();
-      
-    } 
-}
-server.listen(process.env.PORT || port, () => {
-console.log('Server running at http://' + hostname + ':' + port + '/');
+  }
+  fs.readFile('./index.html', 'utf-8' , doReard );
+});
+
+// [1] フロントエンドからのボタンを押したというアクションによるhttpリクエストを受け付けたい
+app.get('/line/action', function(req, res, next) {
+    // [2] line.jsの関数をhofeを使用してline.jsからレスポンスを受け取る
+    // [3] フロントエンドに対してレスポンスを返す
+    res.send('hello world');
+    //res.send(line.hofe());
 });
