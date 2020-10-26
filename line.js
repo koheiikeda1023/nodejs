@@ -6,7 +6,7 @@ const content = querystring.stringify({
     message: "俺はできた気がする"
 })
 
-const options = {
+const notify = {
     hostname: "notify-api.line.me",
     path: "/api/notify",
     method: "POST",
@@ -17,14 +17,17 @@ const options = {
     }
 }
 
-// export function hofe () {
-//     const request = https.request(options, res => {
-//         res.setEncoding("utf8")
-//         res.on("data", console.log)
-//         res.on("error", console.log)
-//     })
-    
-//     request.write(content)
-//     request.end()
-//     return "success";
+exports.notify= function(){
+    return 'LINEに通知成功'
+}
+//Q2 exportがerrorになる、、、何がおかしいのか、、、？
+// export function line() {
+//     const request = https.request(options,res => {
+//             res.setEncoding("utf8");
+//             res.on("data", console.log);
+//             res.on("error", console.log)
+//      })
+//           request.write(content)
+//           request.end()
+//             return "success";
 // }
