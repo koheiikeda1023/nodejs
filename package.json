@@ -1,32 +1,20 @@
 {
-  "name": "sample",
-  "version": "0.0.0",
+  "name": "nodejs-sample",
+  "version": "1.0.0",
+  "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koheiikeda1023/nodejs-sample.git"
   },
-  "keywords": [
-    "prj-mama"
-  ],
-  "author": "techacademy",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/koheiikeda1023/nodejs-sample/issues"
   },
-  "homepage": "https://github.com/koheiikeda1023/nodejs-sample#readme",
-  "description": "",
-  "engines": {
-    "node": "12.19.0"
-  },
-  "dependencies": {
-    "axios": "^0.16.2",
-    "express": "^4.17.1",
-    "http": "0.0.1-security",
-    "querystring": "^0.2.0"
-  }
+  "homepage": "https://github.com/koheiikeda1023/nodejs-sample#readme"
 }
